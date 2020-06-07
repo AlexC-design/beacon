@@ -1,0 +1,31 @@
+@import "../../../../../scss/variables.scss";
+
+.main-screen {
+  overflow: hidden;
+
+  .clouds {
+    height: 75vh;
+  }
+  .bottom-section {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 3s $cbInOut;
+
+    @include section-aware("background-color", "bottom");
+  }
+  .water {
+    position: relative;
+    height: 10vh;
+
+    .water-top {
+      width: 100%;
+      height: 100%;
+      @include section-aware("background-color", "water-top");
+    }
+  }
+}

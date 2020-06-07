@@ -1,0 +1,115 @@
+$sections: (
+  1: (
+    background: #c7dff4,
+    small-clouds: rgba(white, 0.5),
+    large-clouds-1: white,
+    large-clouds-2: #a9d0f4,
+    water-back: #4db4ff,
+    water-top: rgba(#a0c6ff, 0.5),
+    water-lines: rgba(white, 0.5),
+    button: #4b94d8,
+    bottom: #383a75,
+    text: #383a75,
+    white: white
+  ),
+  2: (
+    background: #392e64,
+    small-clouds: rgba(rgb(208, 199, 226), 0.5),
+    large-clouds-1: #564b84,
+    large-clouds-2: #3e3172,
+    water-back: #300863,
+    water-top: rgba(#463172, 0.5),
+    water-lines: rgba(white, 0.5),
+    button: #401b7c,
+    bottom: #230f4f,
+    text: white,
+    white: white
+  ),
+  3: (
+    background: #392e64,
+    small-clouds: rgba(rgb(208, 199, 226), 0.5),
+    large-clouds-1: #564b84,
+    large-clouds-2: #3e3172,
+    water-back: #300863,
+    water-top: rgba(#463172, 0.5),
+    water-lines: rgba(white, 0.5),
+    button: #401b7c,
+    bottom: #230f4f,
+    text: white,
+    white: white
+  )
+);
+
+$sun-moon: #ffffeb;
+$navbar: #19083e;
+
+$cbInOut: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$cbIn: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$cbOut: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$cbSlowIn: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$cbSlowInMild: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$cbSlowOut: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+@mixin section-aware($key, $color) {
+  @each $section-name, $section-color in $sections {
+    .section-#{$section-name} & {
+      #{$key}: map-get(map-get($sections, $section-name), $color);
+    }
+  }
+}
+
+// --- MEDIA QUERYS ---
+
+@mixin width1920 {
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin width1500 {
+  @media (max-width: 1500px) {
+    @content;
+  }
+}
+
+@mixin width1366 {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin width1280 {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin width1000 {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin width768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin width640 {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin width360 {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin widthAbove1000 {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
