@@ -8,6 +8,7 @@ $sections: (
     water-top: rgba(#a0c6ff, 0.5),
     water-lines: rgba(white, 0.5),
     button: #4b94d8,
+    button-hover: #6bafee,
     bottom: #383a75,
     text: #383a75,
     white: white
@@ -21,6 +22,7 @@ $sections: (
     water-top: rgba(#463172, 0.5),
     water-lines: rgba(white, 0.5),
     button: #401b7c,
+    button-hover: #5d3799,
     bottom: #230f4f,
     text: white,
     white: white
@@ -111,5 +113,34 @@ $cbSlowOut: cubic-bezier(0.075, 0.82, 0.165, 1);
 @mixin widthAbove1000 {
   @media (min-width: 1000px) {
     @content;
+  }
+}
+
+// --- ANIMATIONS ---
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes expand-icon {
+  0% {
+    opacity: 0;
+    margin-left: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 0;
+    margin-left: 20px;
+    width: 19px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 20px;
+    width: 19px;
   }
 }

@@ -1,3 +1,21 @@
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 html {
   font-family: "Varela Round", sans-serif;
 }
@@ -6,19 +24,22 @@ html body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+html body .App {
   -webkit-transition: background-color 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: background-color 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-html body.section-1 {
+html body .App.section-1 {
   background-color: #c7dff4;
 }
 
-html body.section-2 {
+html body .App.section-2 {
   background-color: #392e64;
 }
 
-html body.section-3 {
+html body .App.section-3 {
   background-color: #392e64;
 }
 /*# sourceMappingURL=app.css.map */

@@ -8,16 +8,18 @@ html {
     padding: 0;
     overflow: hidden;
 
-    transition: background-color 3s $cbInOut;
+    .App {
+      transition: background-color 3s $cbInOut;
 
-    &.section-1 {
-      background-color: #c7dff4;
-    }
-    &.section-2 {
-      background-color: #392e64;
-    }
-    &.section-3 {
-      background-color: #392e64;
+      &.section-1 {
+        background-color: #c7dff4;
+      }
+      &.section-2 {
+        background-color: #392e64;
+      }
+      &.section-3 {
+        background-color: #392e64;
+      }
     }
   }
 }

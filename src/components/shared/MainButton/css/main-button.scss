@@ -1,1 +1,51 @@
-@import '../../../../scss/variables.scss';
+@import "../../../../scss/variables.scss";
+
+.main-button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-left: 0;
+
+  animation: fade-in 0.4s ease-out;
+
+  transition: background-color 3s $cbInOut;
+
+  @include section-aware("background-color", "button");
+
+  .text {
+    color: white;
+    font-size: 1.2em;
+
+    transition: margin-left 0.2s ease-out;
+  }
+  .icon {
+    margin-left: 0px;
+    opacity: 0;
+    width: 0;
+
+    animation: expand-icon 1s ease-out forwards;
+  }
+
+  &.with-icon {
+    .text {
+      margin-left: 20px;
+    }
+  }
+
+  //.main-button
+  &:hover {
+    @include section-aware("background-color", "button-hover");
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    @include section-aware("background-color", "button");
+  }
+}
