@@ -22,7 +22,7 @@ $sections: (
     large-clouds-2: #3e3172,
     water-back: #300863,
     water-top: rgba(#463172, 0.5),
-    water-lines: rgba(white, 0.5),
+    water-lines: rgba(217, 210, 231, 0.24),
     button: #401b7c,
     button-hover: #5d3799,
     bottom: #230f4f,
@@ -222,5 +222,19 @@ $cbSlowOut: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   100% {
     box-shadow: 0px 0px 20px 5px #ffeec1;
+  }
+}
+
+@for $i from 0 through 50 {
+  @keyframes wiggle-#{$i} {
+    0% {
+      transform: translate(-20px, 0);
+    }
+    50% {
+      transform: translate(random(10) * 2px, 0);
+    }
+    100% {
+      transform: translate(-20px, 0);
+    }
   }
 }

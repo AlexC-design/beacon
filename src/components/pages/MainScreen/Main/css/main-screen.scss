@@ -79,6 +79,13 @@
       transition: background-color 3s $cbInOut;
 
       @include section-aware("background-color", "water-top");
+
+      .water-lines {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 100%;
+      }
     }
   }
 }

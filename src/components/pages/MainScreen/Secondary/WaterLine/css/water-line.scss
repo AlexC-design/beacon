@@ -1,1 +1,25 @@
-@import '../../../../../../scss/variables.scss';
+@import "../../../../../../scss/variables.scss";
+
+.water-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+
+  transition: all 1s ease-in-out;
+
+  .line {
+    margin: 5px 0;
+    height: 5px;
+    min-height: 5px;
+    border-radius: 20px;
+    @include section-aware("background-color", "water-lines");
+
+    transition: all 1s ease-in-out;
+
+    &.one {
+    }
+    &.two {
+    }
+  }
+}

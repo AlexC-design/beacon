@@ -8,6 +8,8 @@ import cloudsLarge2 from "../../../../assets/svg/clouds/clouds-large-2.svg";
 import LightHouse from "../Secondary/LIghtHouse/LightHouse";
 
 const MainScreen = ({ section, setSection }) => {
+  const waterLines = new Array(Math.floor(window.innerWidth / 130)).fill("");
+
   return (
     <div className="main-screen">
       <div className="clouds">
@@ -22,7 +24,11 @@ const MainScreen = ({ section, setSection }) => {
       </div>
       <div className="water">
         <div className="water-top">
-          <WaterLine />
+          <div className="water-lines">
+            {waterLines.map((line, index) => (
+              <WaterLine key={`a-${index}-b`} index={index} />
+            ))}
+          </div>
         </div>
         <Ship />
         <LightHouse section={section} />
