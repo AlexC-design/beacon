@@ -231,4 +231,122 @@
             box-shadow: 0px 0px 20px 5px #ffeec1;
   }
 }
-/*# sourceMappingURL=variables.css.map */
+
+.lighthouse-container {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  -webkit-transform: translate(0%, -85%) scale(0.8);
+          transform: translate(0%, -85%) scale(0.8);
+  -webkit-transform-origin: 100% 80%;
+          transform-origin: 100% 80%;
+}
+
+.lighthouse-container .windows-container {
+  width: 90px;
+  height: 60px;
+  position: absolute;
+  top: 114px;
+  left: 323px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lighthouse-container .windows-container .beacon-glow {
+  position: absolute;
+  top: -160px;
+  left: -146px;
+  -webkit-animation: beacon-glow 6s ease-in-out infinite;
+          animation: beacon-glow 6s ease-in-out infinite;
+}
+
+.lighthouse-container .windows-container .beacon-light {
+  position: absolute;
+}
+
+.lighthouse-container .windows-container .beacon-light.left {
+  left: -620px;
+  -webkit-animation: beacon-light-left 6s ease-in-out infinite;
+          animation: beacon-light-left 6s ease-in-out infinite;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.lighthouse-container .windows-container .beacon-light.right {
+  left: 75px;
+  -webkit-animation: beacon-light-right 6s ease-in-out infinite;
+          animation: beacon-light-right 6s ease-in-out infinite;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.lighthouse-container .windows-container .window {
+  height: 100%;
+  -webkit-transition: all 2s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 2s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.section-1 .lighthouse-container .windows-container .window {
+  background-color: #2c1b3d;
+}
+
+.section-2 .lighthouse-container .windows-container .window {
+  background-color: #ffeec1;
+}
+
+.section-3 .lighthouse-container .windows-container .window {
+  background-color: #ffeec1;
+}
+
+.lighthouse-container .windows-container .window.first {
+  width: 15px;
+}
+
+.lighthouse-container .windows-container .window.second {
+  width: 25px;
+}
+
+.lighthouse-container .windows-container .window.third {
+  width: 25px;
+}
+
+.lighthouse-container .windows-container .window.fourth {
+  width: 15px;
+}
+
+.lighthouse-container .light-pole {
+  width: 14px;
+  height: 18px;
+  position: absolute;
+  top: 572px;
+  left: 177px;
+}
+
+.section-1 .lighthouse-container .light-pole {
+  background-color: #dafbff;
+}
+
+.section-2 .lighthouse-container .light-pole {
+  background-color: #ffeec1;
+}
+
+.section-3 .lighthouse-container .light-pole {
+  background-color: #ffeec1;
+}
+
+.lighthouse-container .light-pole.glowing {
+  -webkit-animation: lightpole-glow 10s ease-in-out infinite;
+          animation: lightpole-glow 10s ease-in-out infinite;
+}
+/*# sourceMappingURL=lighthouse.css.map */

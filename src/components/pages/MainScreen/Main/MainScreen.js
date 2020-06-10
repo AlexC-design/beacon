@@ -5,6 +5,7 @@ import WaterLine from "../Secondary/WaterLine/WaterLine";
 import Ship from "../Secondary/Ship/Ship";
 import cloudsLarge1 from "../../../../assets/svg/clouds/clouds-large-1.svg";
 import cloudsLarge2 from "../../../../assets/svg/clouds/clouds-large-2.svg";
+import LightHouse from "../Secondary/LIghtHouse/LightHouse";
 
 const MainScreen = ({ section, setSection }) => {
   return (
@@ -24,6 +25,7 @@ const MainScreen = ({ section, setSection }) => {
           <WaterLine />
         </div>
         <Ship />
+        <LightHouse section={section} />
       </div>
       <div className="bottom-section">
         <MainButton

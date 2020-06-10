@@ -16,6 +16,42 @@
   }
 }
 
+@-webkit-keyframes expand-icon {
+  0% {
+    opacity: 0;
+    margin-left: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 0;
+    margin-left: 20px;
+    width: 19px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 20px;
+    width: 19px;
+  }
+}
+
+@keyframes expand-icon {
+  0% {
+    opacity: 0;
+    margin-left: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 0;
+    margin-left: 20px;
+    width: 19px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 20px;
+    width: 19px;
+  }
+}
+
 html {
   font-family: "Varela Round", sans-serif;
 }

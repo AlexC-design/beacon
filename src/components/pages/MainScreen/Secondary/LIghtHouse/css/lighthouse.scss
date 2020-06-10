@@ -1,0 +1,82 @@
+@import "../../../../../../scss/variables.scss";
+
+.lighthouse-container {
+  position: absolute;
+  top: 0;
+  right: 10%;
+
+  transform: translate(0%, -85%) scale(0.8);
+  transform-origin: 100% 80%;
+
+  .windows-container {
+    width: 90px;
+    height: 60px;
+
+    position: absolute;
+    top: 114px;
+    left: 323px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .beacon-glow {
+      position: absolute;
+      top: -160px;
+      left: -146px;
+      animation: beacon-glow 6s ease-in-out infinite;
+    }
+
+    .beacon-light {
+      position: absolute;
+
+      &.left {
+        left: -620px;
+        animation: beacon-light-left 6s ease-in-out infinite;
+        transform-origin: right;
+      }
+      &.right {
+        left: 75px;
+        animation: beacon-light-right 6s ease-in-out infinite;
+        transform-origin: left;
+      }
+    }
+
+    .window {
+      @include section-aware("background-color", "lh-windows");
+      height: 100%;
+      transition: all 2s 0.2s $cbInOut;
+
+      &.first {
+        width: 15px;
+      }
+      &.second {
+        width: 25px;
+      }
+      &.third {
+        width: 25px;
+      }
+      &.fourth {
+        width: 15px;
+      }
+    }
+  }
+
+  .light-pole {
+    width: 14px;
+    height: 18px;
+    position: absolute;
+    top: 572px;
+    left: 177px;
+
+    @include section-aware("background-color", "lightpole");
+
+    &.glowing {
+      animation: lightpole-glow 10s ease-in-out infinite;
+    }
+  }
+
+  .lighthouse-body {
+  }
+}

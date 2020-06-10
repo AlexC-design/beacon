@@ -1,6 +1,92 @@
-.ship {
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes expand-icon {
+  0% {
+    opacity: 0;
+    margin-left: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 0;
+    margin-left: 20px;
+    width: 19px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 20px;
+    width: 19px;
+  }
+}
+
+@keyframes expand-icon {
+  0% {
+    opacity: 0;
+    margin-left: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 0;
+    margin-left: 20px;
+    width: 19px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 20px;
+    width: 19px;
+  }
+}
+
+@-webkit-keyframes ship-enter {
+  0% {
+    -webkit-transform: translate(-60%, -80%);
+            transform: translate(-60%, -80%);
+  }
+  100% {
+    -webkit-transform: translate(-40%, -80%);
+            transform: translate(-40%, -80%);
+  }
+}
+
+@keyframes ship-enter {
+  0% {
+    -webkit-transform: translate(-60%, -80%);
+            transform: translate(-60%, -80%);
+  }
+  100% {
+    -webkit-transform: translate(-40%, -80%);
+            transform: translate(-40%, -80%);
+  }
+}
+
+.ship-container {
   position: absolute;
   top: 0;
   left: 20%;
+  z-index: 1;
+  -webkit-animation: ship-enter 20s ease-out forwards;
+          animation: ship-enter 20s ease-out forwards;
+}
+
+.ship-container .ship {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 100% 80%;
+          transform-origin: 100% 80%;
 }
 /*# sourceMappingURL=ship.css.map */

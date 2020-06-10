@@ -11,7 +11,9 @@ $sections: (
     button-hover: #6bafee,
     bottom: #383a75,
     text: #383a75,
-    white: white
+    white: white,
+    lh-windows: #2c1b3d,
+    lightpole: #dafbff
   ),
   2: (
     background: #392e64,
@@ -25,7 +27,9 @@ $sections: (
     button-hover: #5d3799,
     bottom: #230f4f,
     text: white,
-    white: white
+    white: white,
+    lh-windows: #ffeec1,
+    lightpole: #ffeec1
   ),
   3: (
     background: #392e64,
@@ -38,7 +42,9 @@ $sections: (
     button: #401b7c,
     bottom: #230f4f,
     text: white,
-    white: white
+    white: white,
+    lh-windows: #ffeec1,
+    lightpole: #ffeec1
   )
 );
 
@@ -142,5 +148,79 @@ $cbSlowOut: cubic-bezier(0.075, 0.82, 0.165, 1);
     opacity: 1;
     margin-left: 20px;
     width: 19px;
+  }
+}
+
+@keyframes ship-enter {
+  0% {
+    transform: translate(-60%, -80%);
+  }
+  100% {
+    transform: translate(-40%, -80%);
+  }
+}
+
+@keyframes beacon-light-left {
+  0% {
+    transform: scale(0, 0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5, 1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0, 1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes beacon-light-right {
+  0% {
+    transform: scale(0, 1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5, 1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0, 0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes beacon-glow {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  60% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lightpole-glow {
+  0% {
+    box-shadow: 0px 0px 20px 5px #ffeec1;
+  }
+  50% {
+    box-shadow: 0px 0px 10px 0px #ffeec1;
+  }
+  100% {
+    box-shadow: 0px 0px 20px 5px #ffeec1;
   }
 }

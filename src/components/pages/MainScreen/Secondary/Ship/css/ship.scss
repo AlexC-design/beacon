@@ -1,7 +1,18 @@
 @import "../../../../../../scss/variables.scss";
 
-.ship {
+.ship-container {
   position: absolute;
   top: 0;
   left: 20%;
+  z-index: 1;
+
+  animation: ship-enter 20s ease-out forwards;
+
+  .ship {
+    transform: scale(1);
+    transform-origin: 100% 80%;
+
+    .ship-body {
+    }
+  }
 }
