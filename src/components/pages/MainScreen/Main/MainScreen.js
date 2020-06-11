@@ -5,7 +5,7 @@ import WaterLine from "../Secondary/WaterLine/WaterLine";
 import Ship from "../Secondary/Ship/Ship";
 import cloudsLarge1 from "../../../../assets/svg/clouds/clouds-large-1.svg";
 import cloudsLarge2 from "../../../../assets/svg/clouds/clouds-large-2.svg";
-import LightHouse from "../Secondary/LIghtHouse/LightHouse";
+import LightHouse from "../Secondary/LightHouse/LightHouse";
 
 const MainScreen = ({ section, setSection }) => {
   const waterLines = new Array(Math.floor(window.innerWidth / 130)).fill("");
