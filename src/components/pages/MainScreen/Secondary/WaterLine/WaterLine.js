@@ -6,7 +6,8 @@ const WaterLine = ({ index }) => {
     <div
       className="water-line"
       style={{
-        marginTop: `${Math.random() * 60}px`,
+        //setting random heights
+        marginTop: `${Math.random() * (window.innerHeight > 840 ? 60 : 30)}px`,
         //hide some of the line groups
         opacity: `${Math.random() * 3 < 2 ? 1 : 0}`
       }}

@@ -9,6 +9,14 @@ import LightHouse from "../Secondary/LightHouse/LightHouse";
 
 const MainScreen = ({ section, setSection }) => {
   const waterLines = new Array(Math.floor(window.innerWidth / 130)).fill("");
+  const screenSize =
+    window.innerWidth < 1350
+      ? window.innerWidth > 850
+        ? "medium"
+        : window.innerWidth > 450
+        ? "small"
+        : "smallest"
+      : "large";
 
   return (
     <div className="main-screen">
@@ -24,14 +32,16 @@ const MainScreen = ({ section, setSection }) => {
       </div>
       <div className="water">
         <div className="water-top">
-          <div className="water-lines">
-            {waterLines.map((line, index) => (
-              <WaterLine key={`a-${index}-b`} index={index} />
-            ))}
-          </div>
+          {window.innerHeight > 560 && (
+            <div className="water-lines">
+              {waterLines.map((line, index) => (
+                <WaterLine key={`a-${index}-b`} index={index} />
+              ))}
+            </div>
+          )}
         </div>
-        <Ship />
-        <LightHouse section={section} />
+        <Ship section={section} screenSize={screenSize} />
+        <LightHouse section={section} screenSize={screenSize} />
       </div>
       <div className="bottom-section">
         <MainButton

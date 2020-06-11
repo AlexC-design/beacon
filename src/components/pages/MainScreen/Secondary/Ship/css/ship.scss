@@ -4,12 +4,38 @@
   position: absolute;
   top: 0;
   left: 20%;
+  z-index: 3;
 
-  animation: ship-enter 20s ease-out forwards;
+  transition: all 5s $cbSlowOut;
+
+  &.large {
+    transform: translate(-60%, -80%);
+  }
+  &.medium {
+    transform: translate(-80%, -80%);
+  }
+  &.small {
+    transform: translate(-90%, -80%);
+  }
+  &.smallest {
+    transform: translate(-110%, -80%);
+  }
 
   .ship {
-    transform: scale(1);
     transform-origin: 100% 80%;
+
+    &.large {
+      transform: scale(1);
+    }
+    &.medium {
+      transform: scale(0.9);
+    }
+    &.small {
+      transform: scale(0.6);
+    }
+    &.smallest {
+      transform: scale(0.4);
+    }
 
     .claw-container {
       position: absolute;
@@ -44,7 +70,7 @@
         top: 27px;
         left: -3px;
         z-index: 1;
-        
+
         animation: claw 4s ease-in-out infinite;
       }
       .barrel {
@@ -57,9 +83,80 @@
       }
     }
 
+    .anca-container {
+      position: absolute;
+      background-color: orange;
+
+      right: 140px;
+      bottom: 98px;
+      z-index: 3;
+
+      .chain-container {
+        position: absolute;
+        overflow: hidden;
+        height: 10px;
+        width: 10px;
+
+        left: 0;
+        bottom: 0;
+
+        .chain {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+      .anca {
+        position: absolute;
+
+        top: -4px;
+        left: -11px;
+      }
+    }
+
     .ship-body {
       position: relative;
       z-index: 2;
+    }
+  }
+
+  &.initial {
+    transition: all 20s $cbSlowOut;
+
+    &.large {
+      transform: translate(-40%, -80%);
+    }
+    &.medium {
+      transform: translate(-60%, -80%);
+    }
+    &.small {
+      transform: translate(-80%, -80%);
+    }
+    &.smallest {
+      transform: translate(-100%, -80%);
+    }
+  }
+
+  &.anchored {
+    &.large {
+      transform: translate(-10%, -80%) !important;
+    }
+    &.medium {
+      transform: translate(-30%, -80%) !important;
+    }
+    &.small {
+      transform: translate(-50%, -80%) !important;
+    }
+    &.smallest {
+      transform: translate(-80%, -80%) !important;
+    }
+
+    .ship {
+      .anca-container {
+        animation: anca-container 1s 2s ease-in-out forwards;
+        .chain-container {
+          animation: chain-container 1s 2s ease-in-out forwards;
+        }
+      }
     }
   }
 }
