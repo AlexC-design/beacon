@@ -20,6 +20,10 @@ const MainScreen = ({ section, setSection }) => {
 
   return (
     <div className="main-screen">
+      <div className="title-container">
+        <div className="title">Beacon</div>
+        <div className="tagline">Logistics at large</div>
+      </div>
       <div className="clouds">
         <img
           className={`cloud clouds-large-1 ${section === 1 ? "light" : "dark"}`}
@@ -43,7 +47,24 @@ const MainScreen = ({ section, setSection }) => {
         <Ship section={section} screenSize={screenSize} />
         <LightHouse section={section} screenSize={screenSize} />
       </div>
-      <div className="bottom-section">
+      <div className={`bottom-section section-${section}`}>
+        <div className="bottom-paragraph">
+          <p>
+            Providing complete supply chain solutions so that you don't have to
+            deal with multiple suppliers to achieve your goals.
+          </p>
+          {window.innerWidth > 1366 && (
+            <p>
+              Whether you’re after contract logistics or looking for one off
+              ad-hoc freight services, our flexibility is always to your
+              benefit.
+            </p>
+          )}
+          <p>
+            Contact us to see how our services can help your business grow. Let
+            us be your guiding beacon
+          </p>
+        </div>
         <MainButton
           icon={section === 2 ? true : false}
           setSection={setSection}

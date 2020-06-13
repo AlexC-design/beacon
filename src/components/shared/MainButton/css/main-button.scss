@@ -10,7 +10,7 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  margin-left: 0;
+  margin: 50px 0;
 
   animation: fade-in 0.4s ease-out;
 
@@ -34,7 +34,7 @@
 
   &.with-icon {
     .text {
-      margin-left: 20px;
+      margin: 10px 0 10px 20px;
     }
   }
 
@@ -47,5 +47,19 @@
   }
   &:active {
     @include section-aware("background-color", "button");
+  }
+
+  //MEDIA .main-button
+  @include width1366 {
+    min-height: 40px;
+    width: 170px;
+
+    &.with-icon {
+      margin: 1% 0 0 0;
+    }
+    
+    .icon {
+      transform: scale(0.8);
+    }
   }
 }

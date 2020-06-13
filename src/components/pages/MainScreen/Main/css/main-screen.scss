@@ -3,6 +3,49 @@
 .main-screen {
   overflow: hidden;
 
+  .title-container {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 3;
+    font-weight: bold;
+    transition: all 1s ease-in-out;
+    width: 120%;
+
+    @include section-aware("color", "main-text");
+
+    .title {
+      font-size: 5em;
+    }
+    .tagline {
+      font-size: 2.3em;
+    }
+
+    @include width768 {
+      top: 10%;
+      left: 50%;
+      text-align: center;
+
+      transform: translateX(-50%);
+
+      .title {
+        font-size: 3em;
+      }
+      .tagline {
+        font-size: 1.5em;
+      }
+    }
+
+    @include width360 {
+      .title {
+        font-size: 2.8em;
+      }
+      .tagline {
+        font-size: 1.2em;
+      }
+    }
+  }
+
   .clouds {
     height: 75vh;
     position: relative;
@@ -62,6 +105,49 @@
     transition: background-color 3s $cbInOut;
 
     @include section-aware("background-color", "bottom");
+
+    @include width1366 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .bottom-paragraph {
+      margin: 10px 0;
+      width: 0;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+      opacity: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      transition: width 1s $cbInOut, opacity 1s 0.4s ease-in-out;
+
+      p {
+        margin: 2px;
+      }
+
+      @include width1366 {
+        font-size: 0.8em;
+      }
+    }
+
+    &.section-1 {
+      .bottom-paragraph {
+        display: none;
+      }
+    }
+
+    &.section-2 {
+      .bottom-paragraph {
+        opacity: 1;
+        width: 80%;
+      }
+    }
   }
   .water {
     position: relative;
@@ -87,6 +173,15 @@
         justify-content: flex-start;
         height: 100%;
       }
+    }
+  }
+
+  @include width1366 {
+    .water {
+      height: 5vh;
+    }
+    .bottom-section {
+      height: 20vh;
     }
   }
 }

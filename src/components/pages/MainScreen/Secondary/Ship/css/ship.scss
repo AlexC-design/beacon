@@ -6,7 +6,7 @@
   left: 20%;
   z-index: 3;
 
-  transition: all 5s $cbSlowOut;
+  transition: all 5s ease-out;
 
   &.large {
     transform: translate(-60%, -80%);
@@ -132,7 +132,7 @@
       transform: translate(-80%, -80%);
     }
     &.smallest {
-      transform: translate(-100%, -80%);
+      transform: translate(-90%, -80%);
     }
   }
 
@@ -147,14 +147,14 @@
       transform: translate(-50%, -80%) !important;
     }
     &.smallest {
-      transform: translate(-80%, -80%) !important;
+      transform: translate(-70%, -80%) !important;
     }
 
     .ship {
       .anca-container {
-        animation: anca-container 1s 2s ease-in-out forwards;
+        animation: anca-container 1s 4s ease-in-out forwards;
         .chain-container {
-          animation: chain-container 1s 2s ease-in-out forwards;
+          animation: chain-container 1s 4s ease-in-out forwards;
         }
       }
     }
