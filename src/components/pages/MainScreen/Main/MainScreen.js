@@ -24,7 +24,7 @@ const MainScreen = ({ section, setSection }) => {
   return (
     <div className={`main-screen section-${section}`}>
       <div className={`sun section-${section}`} />
-      <div className="title-container">
+      <div className={`title-container section-${section}`}>
         <div className="title">Beacon</div>
         <div className="tagline">Logistics at large</div>
       </div>
@@ -58,10 +58,12 @@ const MainScreen = ({ section, setSection }) => {
       </div>
       <div className={`bottom-section section-${section}`}>
         <div className="bottom-paragraph">
-          <p>
-            Providing complete supply chain solutions so that you don't have to
-            deal with multiple suppliers to achieve your goals.
-          </p>
+          {window.innerWidth > 650 && (
+            <p>
+              Providing complete supply chain solutions so that you don't have
+              to deal with multiple suppliers to achieve your goals.
+            </p>
+          )}
           {window.innerWidth > 1366 && (
             <p>
               Whether you’re after contract logistics or looking for one off

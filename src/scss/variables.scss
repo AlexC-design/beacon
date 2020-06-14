@@ -413,3 +413,26 @@ $cbSlowOut: cubic-bezier(0.075, 0.82, 0.165, 1);
     transform: scale(5);
   }
 }
+
+@keyframes sun-mobile {
+  0% {
+    top: 5%;
+    left: 40%;
+    transform: scale(1);
+  }
+  50% {
+    top: 100%;
+    left: 120%;
+    transform: scale(1);
+  }
+  51% {
+    left: 30%;
+    top: 90%;
+    transform: scale(2);
+  }
+  100% {
+    left: 40%;
+    top: 50%;
+    transform: scale(2);
+  }
+}
