@@ -1,14 +1,17 @@
 import "./css/main-screen.css";
 import React from "react";
 import MainButton from "../../../shared/MainButton/MainButton";
-import WaterLine from "../Secondary/WaterLine/WaterLine";
+// import WaterLine from "../Secondary/WaterLine/WaterLine";
 import Ship from "../Secondary/Ship/Ship";
 import cloudsLarge1 from "../../../../assets/svg/clouds/clouds-large-1.svg";
 import cloudsLarge2 from "../../../../assets/svg/clouds/clouds-large-2.svg";
+import cloudSmall1 from "../../../../assets/svg/clouds/cloud-small-1.svg";
+import cloudSmall2 from "../../../../assets/svg/clouds/cloud-small-2.svg";
+import cloudSmall3 from "../../../../assets/svg/clouds/cloud-small-3.svg";
 import LightHouse from "../Secondary/LightHouse/LightHouse.js";
 
 const MainScreen = ({ section, setSection }) => {
-  const waterLines = new Array(Math.floor(window.innerWidth / 130)).fill("");
+  // const waterLines = new Array(Math.floor(window.innerWidth / 130)).fill("");
   const screenSize =
     window.innerWidth < 1350
       ? window.innerWidth > 850
@@ -19,12 +22,18 @@ const MainScreen = ({ section, setSection }) => {
       : "large";
 
   return (
-    <div className="main-screen">
+    <div className={`main-screen section-${section}`}>
+      <div className={`sun section-${section}`} />
       <div className="title-container">
         <div className="title">Beacon</div>
         <div className="tagline">Logistics at large</div>
       </div>
       <div className="clouds">
+        <div className="clouds-small-container">
+          <img className="cloud-small one" src={cloudSmall1} alt="" />
+          <img className="cloud-small two" src={cloudSmall2} alt="" />
+          <img className="cloud-small three" src={cloudSmall3} alt="" />
+        </div>
         <img
           className={`cloud clouds-large-1 ${section === 1 ? "light" : "dark"}`}
           src={cloudsLarge1}
@@ -36,13 +45,13 @@ const MainScreen = ({ section, setSection }) => {
       </div>
       <div className="water">
         <div className="water-top">
-          {window.innerHeight > 560 && (
+          {/* {window.innerHeight > 560 && (
             <div className="water-lines">
               {waterLines.map((line, index) => (
                 <WaterLine key={`a-${index}-b`} index={index} />
               ))}
             </div>
-          )}
+          )} */}
         </div>
         <Ship section={section} screenSize={screenSize} />
         <LightHouse section={section} screenSize={screenSize} />

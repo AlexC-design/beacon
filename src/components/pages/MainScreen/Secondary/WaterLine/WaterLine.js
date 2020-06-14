@@ -7,7 +7,7 @@ const WaterLine = ({ index }) => {
       className="water-line"
       style={{
         //setting random heights
-        marginTop: `${Math.random() * (window.innerHeight > 840 ? 60 : 30)}px`,
+        marginTop: `${Math.random() * (window.innerHeight > 840 ? 30 : 15)}px`,
         //hide some of the line groups
         opacity: `${Math.random() * 3 < 2 ? 1 : 0}`
       }}

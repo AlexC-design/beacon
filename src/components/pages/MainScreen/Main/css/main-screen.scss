@@ -2,6 +2,7 @@
 
 .main-screen {
   overflow: hidden;
+  height: 100vh;
 
   .title-container {
     position: absolute;
@@ -10,7 +11,7 @@
     z-index: 3;
     font-weight: bold;
     transition: all 1s ease-in-out;
-    width: 120%;
+    width: 100%;
 
     @include section-aware("color", "main-text");
 
@@ -91,6 +92,31 @@
           brightness(82%) contrast(101%);
       }
     }
+
+    .clouds-small-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      animation: clouds-moving 40s linear infinite;
+
+      .cloud-small {
+        position: absolute;
+
+        &.one {
+          top: 5%;
+          left: 5%;
+        }
+        &.two {
+          top: 30%;
+          left: 30%;
+        }
+        &.three {
+          top: 10%;
+          left: 60%;
+        }
+      }
+    }
   }
   .bottom-section {
     position: relative;
@@ -114,6 +140,7 @@
 
     .bottom-paragraph {
       margin: 10px 0;
+      max-height: 50%;
       width: 0;
       overflow: hidden;
       color: white;
@@ -133,12 +160,14 @@
 
       @include width1366 {
         font-size: 0.8em;
+
+        transition: width 0s $cbInOut, opacity 1s 0.4s ease-in-out;
       }
     }
 
     &.section-1 {
       .bottom-paragraph {
-        display: none;
+        height: 0;
       }
     }
 
@@ -183,5 +212,34 @@
     .bottom-section {
       height: 20vh;
     }
+  }
+
+  .sun {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 0px #ffffeb;
+    top: 5%;
+    left: 40%;
+    opacity: 1;
+
+    @include section-aware("background-color", "sun");
+
+    &.section-2 {
+      animation: sun 3s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+    &.section-3 {
+      animation: sun 3s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+
+      transition: opacity 0.4s ease-out;
+      opacity: 0;
+    }
+  }
+
+  &.section-3 {
+    transition: all 0.4s ease-out;
+    height: 0;
+    overflow: hidden;
   }
 }

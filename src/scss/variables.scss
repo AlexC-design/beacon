@@ -14,7 +14,8 @@ $sections: (
     white: white,
     lh-windows: #2c1b3d,
     lightpole: #dafbff,
-    main-text: #383a75
+    main-text: #383a75,
+    sun: #ffffeb
   ),
   2: (
     background: #392e64,
@@ -31,7 +32,8 @@ $sections: (
     white: white,
     lh-windows: #ffeec1,
     lightpole: #ffeec1,
-    main-text: white
+    main-text: white,
+    sun: #ffffeb
   ),
   3: (
     background: #392e64,
@@ -47,16 +49,17 @@ $sections: (
     white: white,
     lh-windows: #ffeec1,
     lightpole: #ffeec1,
-    main-text: white
+    main-text: white,
+    sun: #ffffeb
   )
 );
 
 $sun-moon: #ffffeb;
 $navbar: #19083e;
 
-$cbInOut: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$cbInOut: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 $cbIn: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-$cbOut: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$cbOut: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $cbSlowIn: cubic-bezier(0.6, 0.04, 0.98, 0.335);
 $cbSlowInMild: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 $cbSlowOut: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -376,5 +379,37 @@ $cbSlowOut: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   100% {
     bottom: -142px;
+  }
+}
+
+@keyframes clouds-moving {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes sun {
+  0% {
+    top: 5%;
+    left: 40%;
+    transform: scale(1);
+  }
+  50% {
+    top: 100%;
+    left: 120%;
+    transform: scale(1);
+  }
+  51% {
+    left: 30%;
+    top: 90%;
+    transform: scale(5);
+  }
+  100% {
+    left: 40%;
+    top: 50%;
+    transform: scale(5);
   }
 }
