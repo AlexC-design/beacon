@@ -1,0 +1,91 @@
+@import "../../../../../../scss/variables.scss";
+
+.service-container {
+  position: relative;
+  margin: auto;
+  width: 214px;
+  height: 181px;
+  display: flex;
+  flex-direction: column;
+
+  .icon-container {
+    position: relative;
+    width: 214px;
+    height: 151px;
+
+    .icon-o {
+      position: absolute;
+      z-index: 5;
+      filter: invert(100%);
+
+      transition: all 0.1s $cbSlowOut;
+    }
+    .icon-c {
+      position: absolute;
+      z-index: 4;
+      opacity: 0;
+
+      transition: all 0.1s $cbSlowOut;
+    }
+    .moon {
+      position: absolute;
+      z-index: 3;
+      background-color: #ffffeb;
+      width: 170px;
+      height: 170px;
+      border-radius: 200px;
+      top: -60px;
+      left: 20px;
+      transform: scale(0);
+      opacity: 0;
+
+      transition: all 0.4s $cbOut;
+    }
+    .ground {
+      position: absolute;
+      background-color: #9c96b2;
+      width: 170px;
+      height: 20px;
+      z-index: 3;
+      bottom: -8px;
+      left: 20px;
+      border-radius: 50%;
+      transform: scale(0);
+      opacity: 0;
+
+      transition: all 0.4s $cbInOut;
+    }
+  }
+  .service-name {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+
+    transition: all 0.4s $cbInOut;
+  }
+
+  &:hover {
+    .icon-container {
+      .icon-o {
+        filter: none;
+        transition: all 0.2s $cbSlowIn;
+      }
+      .icon-c {
+        opacity: 1;
+        transition: all 0.2s $cbSlowIn;
+      }
+      .moon {
+        transform: scale(1);
+        opacity: 1;
+      }
+      .ground {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .service-name {
+      font-weight: bold;
+    }
+  }
+}

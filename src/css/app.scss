@@ -9,7 +9,7 @@ html {
     overflow: hidden;
 
     .App {
-      transition: background-color 3s $cbInOut;
+      transition: background-color 3s $cbOut;
 
       &.section-1 {
         background-color: #c7dff4;
@@ -18,7 +18,7 @@ html {
         background-color: #392e64;
       }
       &.section-3 {
-        background-color: #392e64;
+        background-color: #2f1e52;
       }
     }
   }
