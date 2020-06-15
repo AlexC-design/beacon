@@ -12,11 +12,18 @@
     font-weight: bold;
     transition: all 1s ease-in-out;
     width: 80%;
+    user-select: none;
 
     @include section-aware("color", "main-text");
 
     .title {
       font-size: 5em;
+
+      &.section-3 {
+        cursor: pointer;
+        max-width: 100px;
+        user-select: default;
+      }
     }
     .tagline {
       font-size: 2.3em;
@@ -63,6 +70,7 @@
   .clouds {
     height: 75vh;
     position: relative;
+    user-select: none;
 
     transition: background-color 3s $cbInOut;
 

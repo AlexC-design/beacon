@@ -4,7 +4,7 @@ import MainScreen from "./components/pages/MainScreen/Main/MainScreen";
 import Services from "./components/pages/Services/Main/Services";
 
 function App() {
-  const [section, setSection] = useState(1);
+  const [section, setSection] = useState(3);
 
   return (
     <div className={`App section-${section}`}>

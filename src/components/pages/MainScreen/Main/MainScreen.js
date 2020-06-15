@@ -21,11 +21,19 @@ const MainScreen = ({ section, setSection }) => {
         : "smallest"
       : "large";
 
+  const handleClick = () => {
+    if (section === 3) {
+      setSection(1);
+    }
+  };
+
   return (
     <div className={`main-screen section-${section}`}>
       <div className={`sun section-${section}`} />
       <div className={`title-container section-${section}`}>
-        <div className="title">Beacon</div>
+        <div onClick={handleClick} className={`title section-${section}`}>
+          Beacon
+        </div>
         <div className="tagline">Logistics at large</div>
       </div>
       <div className="clouds">
