@@ -36,7 +36,7 @@ $sections: (
     sun: #ffffeb
   ),
   3: (
-    background: #230F4F,
+    background: #230f4f,
     small-clouds: rgba(rgb(208, 199, 226), 0.5),
     large-clouds-1: #564b84,
     large-clouds-2: #3e3172,
@@ -124,6 +124,12 @@ $cbSlowOut: cubic-bezier(0.075, 0.82, 0.165, 1);
 
 @mixin widthAbove1000 {
   @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin height850 {
+  @media (max-height: 850px) {
     @content;
   }
 }

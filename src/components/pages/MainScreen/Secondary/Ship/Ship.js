@@ -14,7 +14,7 @@ const Ship = ({ section, screenSize }) => {
   return (
     <div
       className={`ship-container ${
-        section === 1 ? initialPosition : "anchored"
+        section === 1 || section === 3 ? initialPosition : "anchored"
       } ${screenSize}`}
     >
       <div className={`ship ${screenSize}`}>

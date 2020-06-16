@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import Service from "../Secondary/Service/Service";
 import forkLiftOutline from "../../../../assets/icons/forklift-o.svg";
 import forkLiftColor from "../../../../assets/icons/forklift-c.svg";
+// import servicesList from "./servicesList";
 
 const Services = ({ section }) => {
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState(
+    "Shipping the capacity that is right for your business. You can count on our team to help book, process and manage the ideal schedule for your ocean freight."
+  );
   const [fade, setFade] = useState("in");
 
   const switchDescription = newDescription => {

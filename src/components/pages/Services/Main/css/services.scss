@@ -3,6 +3,11 @@
 .services-page {
   height: 100vh;
   user-select: none;
+  display: none;
+
+  &.section-3 {
+    display: inline;
+  }
 
   .title {
     color: white;
@@ -29,14 +34,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    transition: all 2s $cbSlowIn;
+    padding: 0 10vw;
 
     &.fade-in {
-      opacity: 1;
+      animation: fade-in 0.4s ease-in-out;
     }
     &.fade-out {
-      opacity: 0;
+      animation: none;
     }
   }
 
@@ -50,6 +54,52 @@
     height: 60%;
     max-width: 1200px;
     margin: 20px auto 0;
+  }
+
+  @include width1000 {
+    .title {
+      margin: 10px 0;
+    }
+
+    .services-container {
+      grid-template-columns: 1fr 1fr;
+      padding: 100px;
+
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      -webkit-mask-image: linear-gradient(
+        transparent,
+        #000,
+        #000,
+        #000,
+        #000,
+        #000,
+        #000,
+        #000,
+        #000,
+        #000,
+        #000,
+        #000,
+        #000,
+        #000,
+        #000,
+        transparent
+      );
+    }
+  }
+
+  @include width768 {
+    .description {
+      font-size: 0.8em;
+    }
+
+    .services-container {
+      grid-template-columns: 1fr;
+    }
   }
 
   &.section-3 {

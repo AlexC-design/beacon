@@ -8,6 +8,14 @@
   display: flex;
   flex-direction: column;
 
+  @include height850 {
+    transform: scale(0.8);
+  }
+
+  @include width1000 {
+    transform: scale(0.8);
+  }
+
   .icon-container {
     position: relative;
     width: 214px;

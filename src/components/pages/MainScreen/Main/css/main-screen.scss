@@ -36,6 +36,10 @@
 
       transform: translateX(-50%);
 
+      &.section-3 {
+        transform: none;
+      }
+
       .title {
         font-size: 3em;
       }
@@ -55,7 +59,7 @@
 
     &.section-3 {
       top: 15px;
-      left: 60px;
+      left: 30px;
 
       .title {
         font-size: 1.2em;
@@ -200,6 +204,7 @@
       .bottom-paragraph {
         opacity: 1;
         width: 80%;
+        margin-bottom: 0;
       }
     }
   }
