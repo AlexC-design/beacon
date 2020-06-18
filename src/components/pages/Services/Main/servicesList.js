@@ -1,3 +1,16 @@
+import seaFreightO from "../../../../assets/icons/ship-o.svg";
+import seaFreightC from "../../../../assets/icons/ship-c.svg";
+import airFreightO from "../../../../assets/icons/plane-o.svg";
+import airFreightC from "../../../../assets/icons/plane-c.svg";
+import truckingO from "../../../../assets/icons/truck-o.svg";
+import truckingC from "../../../../assets/icons/truck-c.svg";
+import logisticsO from "../../../../assets/icons/forklift-o.svg";
+import logisticsC from "../../../../assets/icons/forklift-c.svg";
+import customsO from "../../../../assets/icons/customs-o.svg";
+import customsC from "../../../../assets/icons/customs-c.svg";
+import consultancyO from "../../../../assets/icons/graph-o.svg";
+import consultancyC from "../../../../assets/icons/graph-c.svg";
+
 export const servicesList = [
   {
     name: "Sea freight",
@@ -16,7 +29,7 @@ export const servicesList = [
   {
     name: "Trucking",
     iconO: truckingO,
-    iconC: truckinC,
+    iconC: truckingC,
     description:
       "Freight over land using trucks of all sizes, keeping transit time and costs at its lowest."
   },
