@@ -30,6 +30,7 @@ const Services = ({ section }) => {
             name={service.name}
           />
         ))}
+        <div className="offset" />
       </div>
     </div>
   );

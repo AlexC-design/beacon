@@ -99,6 +99,10 @@
 
     .services-container {
       grid-template-columns: 1fr;
+
+      .offset {
+        height: 200px;
+      }
     }
   }
 
